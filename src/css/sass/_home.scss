@@ -1,0 +1,28 @@
+#home {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: #27323E;
+}
+
+.title {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    &>.developpeur {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.laltop {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,48 @@
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#home {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: #27323E;
+}
+
+.title {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.title > .developpeur {
+  display: flex;
+  align-items: center;
+}
+
+.laltop {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: 0;
+  background: none;
+  font-family: "Ubuntu", sans-serif;
+}/*# sourceMappingURL=index.css.map */
