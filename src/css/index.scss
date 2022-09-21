@@ -1,5 +1,9 @@
+@use './sass/variable';
 @use './sass/header';
 @use './sass/home';
+@use './sass/about';
+@use './sass/skills';
+@use './sass/projets';
 
 // Reset
 *,
@@ -12,4 +16,9 @@ body {
     border: 0;
     background: none;
     font-family: 'Ubuntu', sans-serif;
+    color: var(--white);
+}
+
+body {
+    overflow-x: hidden;
 }

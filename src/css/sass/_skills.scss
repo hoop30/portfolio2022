@@ -1,0 +1,85 @@
+.skills {
+    background: var(--main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 0 150px;
+}
+
+.skills-left,
+.skills-right {
+
+    &>ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 30px;
+
+        &>li {
+            display: flex;
+            gap: 15px;
+            font-size: 1.2em;
+
+            &>div>h2 {
+                color: transparent;
+                background: var(--gradient);
+                background-clip: text;
+            }
+            
+            &>.skills-side-img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: var(--gradient);
+                border-radius: 50px;
+                width: 68px;
+                height: 68px;
+
+                &>img {
+                    padding: 5px;
+                    background: var(--main);
+                    border-radius: 50px;
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+        }
+    }
+}
+
+.skills-left {
+    &>ul {
+        
+        &>li {
+            justify-content: flex-end;
+            text-align: end;
+
+            &>div>ul>li::after {
+                content: ' •';
+            }
+        }
+    }
+}
+
+.skills-right {
+    &>ul {
+
+        &>li {
+            justify-content: flex-start;
+
+            &>div>ul>li::before {
+                content: '• ';
+            }
+        }
+    }
+}
+
+.skills-img {
+    position: relative;
+
+    &>.iphone {
+        position: absolute;
+        bottom: -30px;
+        right: 50px;
+    }
+}

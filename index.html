@@ -14,19 +14,22 @@
 
     <!-- Css -->
     <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
     <!-- Javascript Http=>https (comment to run liveServer) -->
     <!-- <script src="./src/javascript/redirect.js"></script> -->
 
-    <!-- Swiperjs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
 
     <!-- Font -->
 </head>
 
 <body>
     <header>
-        <h2>GRANIER Kévin</h2>
+        <div class="wording">
+            <h2>GRANIER Kévin</h2>
+            <h2>Développement Web</h2>
+        </div>
         <div class="menu">
             <img src="./src/assets/logo/hamburger_icon_194952.png" alt="menu">
             <nav></nav>
@@ -38,10 +41,10 @@
         <article id="home">
             <div class="title">
                 <p>Hello, je suis</p>
-                <p>Kévin</p>
+                <p class="name">Kévin</p>
                 <div class="developpeur">
-                    <h1>DEVELOPPEUR FRONT-END</h1> | 
-                    <h2>REACT</h2> | 
+                    <h1>DEVELOPPEUR FRONT-END</h1> |
+                    <h2>REACT</h2> |
                     <h2>FREELANCER</h2>
                 </div>
                 <div class="social">
@@ -51,18 +54,173 @@
                 </div>
             </div>
             <div class="laltop">
-    
+                <img src="./src/assets/img/laltop.png" alt="">
             </div>
             <div class="mouse">
-    
+                <div class="mouse-color">
+                    <div class="roll"></div>
+                </div>
             </div>
         </article>
 
-        <article></article>
-        <article></article>
-        <article></article>
-        <article></article>
+        <article class="about">
+            <div class="about-img">
+                <img src="./src/assets/img/photo 500x500.png" alt="moi" width="70%" height="70%">
+            </div>
+            <div class="about-right">
+                <div class="about-txt">
+                    <span></span>
+                    <h2>A propos de moi</h2>
+                    <p>
+                        Je suis Kévin Granier, 34 ans. <strong>Developpeur</strong> web Front-end
+                        <strong>Freelance</strong>.
+                        Je travaille avec<br>
+                        <strong>Htlm</strong>, <strong>Css</strong> : Sass, Bootstrap, Talwind.<br>
+                        <strong>Javascript</strong>: Vanilla, Jquery.<br>
+                        <strong>React</strong>.
+                    </p>
+                    <p>
+                        Retrouver une présentation de mes différents <strong>projets</strong>, et contacter moi pour vos
+                        missions de developpement <strong>Front-End</strong> en remote et à Avignon.
+                    </p>
+                </div>
+                <img class="map" src="./src/assets/img/carte.png" alt="Avignon" width="400px" height="400px">
+            </div>
+        </article>
+
+        <article class="skills">
+            <div class="skills-left">
+                <ul>
+                    <li>
+                        <div>
+                            <h2>HTML</h2>
+                        </div>
+                        <div class="skills-side-img">
+                            <img src="./src/assets/logo/Html.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h2>CSS</h2>
+                            <ul>
+                                <li>Sass</li>
+                                <li>Bootstrap</li>
+                                <li>Tailwind</li>
+                            </ul>
+                        </div>
+                        <div class="skills-side-img">
+                            <img src="./src/assets/logo/Css.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h2>JAVASCRIPT</h2>
+                            <ul>
+                                <li>Vanilla</li>
+                                <li>Jquery</li>
+                            </ul>
+                        </div>
+                        <div class="skills-side-img">
+                            <img src="./src/assets/logo/Javascript.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h2>REACT</h2>
+                        </div>
+                        <div class="skills-side-img">
+                            <img src="./src/assets/logo/react.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="skills-img">
+                <img class="macbook" src="./src/assets/img/macBook-skills.png" alt="" width="700px" height="auto">
+                <img class="iphone" src="./src/assets/img/iphone-skills.png" alt="" width="130px" height="auto">
+            </div>
+            <div class="skills-right">
+                <ul>
+
+                    <li>
+                        <div class="skills-side-img">
+                            <img src="./src/assets/logo/logo-photoshop.png" alt="">
+                        </div>
+                        <div>
+                            <h2>PHOTOSHOP</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skills-side-img">
+                            <img src="./src/assets/logo/Github.png" alt="">
+                        </div>
+                        <div>
+                            <h2>GITHUB</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skills-side-img">
+                            <img src="./src/assets/logo/jest.png" alt="">
+                        </div>
+                        <div>
+                            <h2>JEST</h2>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="projects">
+            <!-- Slider main container -->
+            <div class="swiper mySwiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+
+                        <div class="project-box-border">
+                            <div class="project-box">
+                                <div class="project-img"></div>
+                                <div class="project-txt"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide">
+
+                        <div class="project-box-border">
+                            <div class="project-box">
+                                <div class="project-img"></div>
+                                <div class="project-txt"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </article>
+
+        <article>
+
+            
+
+        </article>
     </main>
+
+    <!-- Javascript -->
+    <!-- Swiperjs -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./src/javascript/swiperjs.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
 </body>
 
 </html>
