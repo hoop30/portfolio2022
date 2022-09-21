@@ -179,6 +179,7 @@
 
                         <div class="project-box-border">
                             <div class="project-box">
+                                <div class="background"></div>
                                 <div class="project-img"></div>
                                 <div class="project-txt"></div>
                             </div>
@@ -189,6 +190,7 @@
 
                         <div class="project-box-border">
                             <div class="project-box">
+                                <div class="background"></div>
                                 <div class="project-img"></div>
                                 <div class="project-txt"></div>
                             </div>
@@ -202,20 +204,26 @@
 
         </article>
 
-        <article>
-
-            
-
-        </article>
+        <article></article>
     </main>
 
     <!-- Javascript -->
     <!-- Swiperjs -->
-    
+
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./src/javascript/swiperjs.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
+            loop: false,
+            
+            breakpoints: {
+                // when window width is >= 770px
+                980: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                }
+            },
+
             pagination: {
                 el: ".swiper-pagination",
             },
