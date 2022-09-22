@@ -170,6 +170,10 @@
         </article>
 
         <article class="projects">
+            <div class="projects-title">
+                <span></span>
+                <h2>Projets</h2>
+            </div>
             <!-- Slider main container -->
             <div class="swiper mySwiper">
                 <!-- Additional required wrapper -->
@@ -180,8 +184,18 @@
                         <div class="project-box-border">
                             <div class="project-box">
                                 <div class="background"></div>
-                                <div class="project-img"></div>
-                                <div class="project-txt"></div>
+                                <div class="border-in">
+                                    <div class="project-img">
+                                        <img src="./src/assets/img/e-com.jpg" alt="e-com / FUTURE">
+                                        <div class="mask"></div>
+                                    </div>
+                                    <div class="project-txt">
+                                        <h3>e-com / FUTURE</h3>
+                                        <p>
+                                            Le projet e-com est un site de E-commerce en react
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -191,8 +205,21 @@
                         <div class="project-box-border">
                             <div class="project-box">
                                 <div class="background"></div>
-                                <div class="project-img"></div>
-                                <div class="project-txt"></div>
+                                <div class="border-in">
+                                    <div class="project-img">
+                                        <img src="./src/assets/img/movie-app.jpg" alt="Movie-app">
+                                        <div class="mask"></div>
+                                    </div>
+                                    <div class="project-txt">
+                                        <h3>Movie-app</h3>
+                                        <p>
+                                            Un projet React avec l'API Omdb. permetant de crée un profil et
+                                            une whislist
+                                            de vos film préferé. <br> Pour le moment seulement la page d'acceuil est
+                                            disponible
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -204,7 +231,59 @@
 
         </article>
 
-        <article></article>
+        <article class="contact">
+            <div class="contact-title">
+                <span></span>
+                <h2>Contact</h2>
+            </div>
+            <div class="contact-content">
+                <form method="post" action="./src/php/mail.php">
+                    <div id="messageSend" class="message-send">Merci !<br>Votre message viens d'étre envoyer</div>
+                    <div class="name">
+                        <div class="input inp-fname">
+                            <input type="text" name="first-name" id="first-name" placeholder="Prénom" required>
+                        </div>
+                        <div class="input inp-lname">
+                            <input type="text" name="last-name" id="last-name" placeholder="Nom">
+                        </div>
+                    </div>
+                    <div class="input inp-mail">
+                        <input type="email" name="email" id="email" placeholder="email@votre-email.fr" required>
+                    </div>
+                    <div class="input inp-subject">
+                        <input type="text" name="subject" id="subject" placeholder="Sujet">
+                    </div>
+                    <div class="input inp-message">
+                        <textarea name="message" id="message" rows="5" placeholder="Votre message" required></textarea>
+                        </div>
+                    <button class="submit-button" type="submit" id="btnSend">
+                        <p>Envoyer</p>
+                    </button>
+                </form>
+                <div class="info">
+                    <p class="address-title address">Adresse:</p>
+                    <p class="address-content">
+                        GRANIER Kévin <br>
+                        3 rue de l’eglise 30150 <br>
+                        St géniés de comolas
+                    </p>
+                    <p class="address-title mail">Mail:</p>
+                    <p class="address-content">
+                        kevin.granier@gmail.com
+                    </p>
+                    <p class="address-title phone">Telephone:</p>
+                    <p class="address-content">
+                        06-26-46-28-64
+                    </p>
+                    <div class="social">
+                        <img src="./src/assets/logo/Linkedin.png" alt="">
+                        <img src="./src/assets/logo/Github.png" alt="">
+                        <img src="./src/assets/logo/Malt.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </article>
+
     </main>
 
     <!-- Javascript -->
@@ -215,7 +294,7 @@
     <script>
         var swiper = new Swiper(".mySwiper", {
             loop: false,
-            
+
             breakpoints: {
                 // when window width is >= 770px
                 980: {

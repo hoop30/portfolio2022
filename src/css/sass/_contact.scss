@@ -1,0 +1,181 @@
+.contact {
+    background: var(--main);
+    padding: 150px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.contact-title {
+    position: relative;
+    align-self: flex-start;
+    margin-left: 10%;
+
+    &>span {
+        display: block;
+        position: absolute;
+        left: -20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        background: var(--gradient);
+    }
+
+    &>h2 {
+        position: relative;
+        z-index: 10;
+        font-size: 44px;
+        margin-bottom: 120px;
+    }
+}
+
+.contact-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+}
+
+
+form {
+    position: relative;
+
+    &>.message-send {
+        position: absolute;
+        top: -70px;
+        background: var(--gradient);
+        background-clip: text;
+        color: transparent;
+        font-weight: 600;
+        opacity: 0;
+        transition: 0.3s ease-out;
+    }
+
+    &>.name {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &>.submit-button {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        background: var(--gradient);
+        border-radius: 50px;
+        height: 49px;
+        width: 167px;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-weight: 600;
+        transition: 0.2s ease-out;
+
+        &:hover {
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5), -4px -4px 4px rgba(255, 255, 255, 0.2);
+        }
+        &:active {
+            box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.5), inset -4px -4px 4px rgba(255, 255, 255, 0.2);
+        }
+    }
+}
+
+.input {
+    background: var(--gradient);
+    border-radius: 50px;
+    height: 59px;
+    width: 634px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &.inp-lname,
+    &.inp-fname {
+        width: 304px;
+
+        &>input {
+            width: 300px;
+            &:focus {
+                outline: none;
+                height: 53px;
+                width: 298px;
+            }
+        }
+    }
+
+    &.inp-message {
+        height: 192px;
+    }
+
+    &>input {
+        background: var(--main);
+        border-radius: 50px;
+        height: 55px;
+        width: 630px;
+        padding: 0 25px;
+        font-size: 1.1em;
+        
+        &:focus {
+            outline: none;
+            height: 53px;
+            width: 628px;
+        }
+    }
+
+    &>textarea {
+        background: var(--main);
+        border-radius: 50px;
+        padding: 25px;
+        height: 188px;
+        width: 630px;
+        font-size: 1.1em;
+
+        &:focus {
+            outline: none;
+            height: 186px;
+            width: 628px;
+        }
+    }
+}
+
+.info {
+    background: var(--gradient);
+    height: 100%;
+    border-radius: 8px;
+    padding: 40px 20px 40px 20px;
+
+    &>.address-title {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+
+        &.address::before {
+            content: "📭 ";
+        }
+        &.mail::before {
+            content: "📧 ";
+        }
+        &.phone::before {
+            content: "📱 ";
+        }
+    }
+
+    &>.address-content {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        padding-left: 60px;
+    }
+
+    &>.social {
+        padding-top: 20px;
+        display: flex;
+        gap: 15px;
+
+        &>img {
+            width: 40px;
+            height: auto;
+        }
+    }
+}
