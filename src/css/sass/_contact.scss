@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
 .contact-title {
@@ -36,6 +36,10 @@
     justify-content: center;
     align-items: center;
     gap: 15%;
+
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+    }
 }
 
 
@@ -56,6 +60,7 @@ form {
     &>.name {
         display: flex;
         justify-content: space-between;
+
     }
 
     &>.submit-button {
@@ -75,8 +80,18 @@ form {
         &:hover {
             box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5), -4px -4px 4px rgba(255, 255, 255, 0.2);
         }
+
         &:active {
             box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.5), inset -4px -4px 4px rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    @media screen and (max-width: 770px) {
+        width: 95%;
+
+        &>.name {
+            flex-direction: column;
+            width: 95%;
         }
     }
 }
@@ -90,6 +105,7 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2px;
 
 
     &.inp-lname,
@@ -97,11 +113,10 @@ form {
         width: 304px;
 
         &>input {
-            width: 300px;
+            width: 100%;
+
             &:focus {
                 outline: none;
-                height: 53px;
-                width: 298px;
             }
         }
     }
@@ -113,15 +128,13 @@ form {
     &>input {
         background: var(--main);
         border-radius: 50px;
-        height: 55px;
-        width: 630px;
+        height: 100%;
+        width: 100%;
         padding: 0 25px;
         font-size: 1.1em;
-        
+
         &:focus {
             outline: none;
-            height: 53px;
-            width: 628px;
         }
     }
 
@@ -129,14 +142,21 @@ form {
         background: var(--main);
         border-radius: 50px;
         padding: 25px;
-        height: 188px;
-        width: 630px;
+        height: 100%;
+        width: 100%;
         font-size: 1.1em;
 
         &:focus {
             outline: none;
-            height: 186px;
-            width: 628px;
+        }
+    }
+
+    @media screen and (max-width: 770px) {
+        width: 95%;
+
+        &.inp-lname,
+        &.inp-fname {
+            width: 75%;
         }
     }
 }
@@ -154,9 +174,11 @@ form {
         &.address::before {
             content: "📭 ";
         }
+
         &.mail::before {
             content: "📧 ";
         }
+
         &.phone::before {
             content: "📱 ";
         }

@@ -4,6 +4,11 @@
     justify-content: center;
     align-items: center;
     padding: 200px 0 150px;
+
+    @media screen and (max-width: 770px) {
+        flex-direction: column;
+        gap: 40px;
+    }
 }
 
 .skills-left,
@@ -44,6 +49,9 @@
                 }
             }
         }
+        @media screen and (max-width: 1200px) {
+            padding: 0 60px;
+        }
     }
 }
 
@@ -81,5 +89,18 @@
         position: absolute;
         bottom: -30px;
         right: 50px;
+    }
+
+    @media screen and (max-width: 1450px) {
+        
+        &>.macbook {
+            width: 80%;
+        }
+        &>.iphone {
+            width: 20%;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        display: none;
     }
 }
