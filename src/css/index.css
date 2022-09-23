@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :root {
-  --gradient: linear-gradient(155deg, rgba(252,74,26,1) 0%, rgba(247,183,51,1) 100%);
+  --gradient: linear-gradient(155deg, #fc4a1a 0%, #f7b733 100%);
   --main:#27323E;
   --second:#212529;
   --white:#fff;
@@ -207,27 +207,34 @@ header {
   }
 }
 
-.laltop {
+.img-laltop {
+  position: relative;
   width: 40%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.laltop > img {
+.img-laltop > * {
   width: 70%;
   height: auto;
 }
+.img-laltop > *.laltop {
+  z-index: 10;
+}
+.img-laltop > *.screen {
+  position: absolute;
+}
 @media screen and (max-width: 1200px) {
-  .laltop {
+  .img-laltop {
     width: 60%;
   }
-  .laltop > img {
+  .img-laltop > img {
     width: 100%;
   }
 }
 @media screen and (max-width: 770px) {
-  .laltop {
+  .img-laltop {
     height: 20%;
   }
 }
@@ -647,7 +654,7 @@ header {
   position: relative;
   z-index: 10;
   font-size: 44px;
-  margin-bottom: 120px;
+  padding-bottom: 120px;
 }
 
 .contact-content {
@@ -660,11 +667,16 @@ header {
 @media screen and (max-width: 1200px) {
   .contact-content {
     flex-direction: column;
+    gap: 100px;
   }
 }
 
 form {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 form > .message-send {
   position: absolute;
@@ -673,19 +685,20 @@ form > .message-send {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+  font-size: 1.2em;
   font-weight: 600;
   opacity: 0;
   transition: 0.3s ease-out;
 }
+form > .message-send.send {
+  opacity: 1;
+}
 form > .name {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 form > .submit-button {
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
   background: var(--gradient);
   border-radius: 50px;
   height: 49px;
@@ -696,10 +709,12 @@ form > .submit-button {
   transition: 0.2s ease-out;
 }
 form > .submit-button:hover {
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5), -4px -4px 4px rgba(255, 255, 255, 0.2);
+  font-size: 1.4em;
+  transform: scale(1, 0.9);
 }
 form > .submit-button:active {
-  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.5), inset -4px -4px 4px rgba(255, 255, 255, 0.2);
+  font-size: 1em;
+  transform: scale(1.1, 0.8);
 }
 @media screen and (max-width: 770px) {
   form {
@@ -752,6 +767,7 @@ form > .submit-button:active {
   height: 100%;
   width: 100%;
   font-size: 1.1em;
+  resize: none;
 }
 .input > textarea:focus {
   outline: none;
@@ -767,7 +783,6 @@ form > .submit-button:active {
 
 .info {
   background: var(--gradient);
-  height: 100%;
   border-radius: 8px;
   padding: 40px 20px 40px 20px;
 }
@@ -814,4 +829,15 @@ body {
 
 body {
   overflow-x: hidden;
+}
+
+.social a {
+  transition: 0.2s ease-out;
+}
+.social a:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.dontSend {
+  background: red;
 }/*# sourceMappingURL=index.css.map */
