@@ -85,15 +85,31 @@
 .skills-img {
     position: relative;
 
+    &>.macbook {
+        position: relative;
+        z-index: 10;
+    }
+    &>.macbook-screen {
+        z-index: 20;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
     &>.iphone {
         position: absolute;
         bottom: -30px;
         right: 50px;
+        z-index: 40;
+
+        &.iphone-screen {
+            z-index: 30;
+        }
     }
 
     @media screen and (max-width: 1450px) {
         
-        &>.macbook {
+        &>.macbook, &>.macbook-screen {
             width: 80%;
         }
         &>.iphone {
