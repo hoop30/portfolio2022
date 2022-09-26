@@ -1,9 +1,11 @@
 @charset "UTF-8";
 :root {
   --gradient: linear-gradient(155deg, #fc4a1a 0%, #f7b733 100%);
+  --gradient2: linear-gradient(155deg, rgba(242,201,76,1) 0%, rgba(255,166,88,1) 100%);
   --main:#27323E;
   --second:#212529;
   --white:#fff;
+  --yellow: #f2c94c;
 }
 
 @-webkit-keyframes mouse_rool {
@@ -526,74 +528,35 @@ header {
   margin-bottom: 120px;
 }
 
-.project-box-border {
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  background: linear-gradient(155deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+.project-box {
   width: 400px;
   height: 500px;
-  padding: 2px;
-}
-.project-box-border > .project-box {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  background: var(--main);
-  width: 100%;
-  height: 100%;
-  padding: 10px;
+  background: #27323E;
+  border-radius: 12px;
   overflow: hidden;
+  color: white;
+  text-align: start;
 }
-.project-box-border > .project-box > .background {
-  position: absolute;
-  background: radial-gradient(ellipse at bottom 10% right 10%, #fc8e01 0%, #fc6b01 5%, #ee4407 10%, #cb3411 15%, #a22f1b 20%, #762922 25%, #562525 30%, #422424 35%, #342424 40%, #2c2424 45%, #262525 50%, #2e2e2e 100%);
-  width: 100%;
-  height: 100%;
+.project-box:hover > a > img {
+  filter: blur(3px);
 }
-.project-box-border > .project-box:hover > .border-in > .project-img > img {
-  filter: blur(5px);
-}
-.project-box-border > .project-box:hover > .border-in > .project-img > .mask {
+.project-box:hover > a > .mask {
   opacity: 1;
 }
-@media screen and (max-width: 420px) {
-  .project-box-border {
-    width: 95%;
-  }
-}
-
-.border-in {
-  z-index: 10;
-  border: solid 4px var(--white);
-  border-radius: 12px;
+.project-box > a {
   width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.project-img {
+  height: 60%;
   position: relative;
+  display: block;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 10px;
-  overflow: hidden;
-  height: 60%;
 }
-.project-img > img {
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  transition: 0.3S ease-out;
+.project-box > a > img {
+  width: auto;
+  height: 100%;
+  transition: 0.3s ease-out;
 }
-.project-img > .mask {
+.project-box > a > .mask {
   -webkit-mask-image: url(../assets/logo/loupe.svg);
           mask-image: url(../assets/logo/loupe.svg);
   -webkit-mask-size: 20%;
@@ -603,30 +566,37 @@ header {
   -webkit-mask-position: center;
           mask-position: center;
   background: var(--gradient);
-  background-size: 20%;
+  background-size: 10%;
   width: 100%;
   height: 100%;
   opacity: 0;
   position: absolute;
+  top: 0;
+  left: 0;
   transition: 0.3s ease-out;
 }
-
-.project-txt {
-  border-top: solid 4px var(--white);
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  height: 40%;
-  padding: 10px;
+.project-box > .project-txt {
+  margin: 20px 30px;
   overflow: hidden;
+  height: 30%;
 }
-.project-txt > p {
-  margin-top: 10px;
-  text-align: start;
+.project-box > .project-txt > h3 {
+  color: transparent;
+  background: linear-gradient(155deg, #fc4a1a 0%, #f7b733 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+@media screen and (max-width: 420px) {
+  .project-box {
+    width: 95%;
+  }
 }
 
 .swiper {
   width: 100%;
-  height: 100%;
+  height: 540px;
 }
 
 .swiper-slide {
@@ -635,7 +605,7 @@ header {
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .swiper-pagination {

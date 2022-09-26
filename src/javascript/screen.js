@@ -21,26 +21,61 @@ setInterval(() => {
 }, 150)
 
 //iphone skills
-setInterval(() => {
+// setInterval(() => {
     
-    iphoneScreen.src = `./src/assets/Mobile/mobile${y}.png`
+//     iphoneScreen.src = `./src/assets/Mobile/mobile${y}.png`
 
-    if (y === 160) {
-        reverse = true
-    } else if (y === 0) {
-        reverse = false
-    }
+//     if (y === 160) {
+//         reverse = true
+//     } else if (y === 0) {
+//         reverse = false
+//     }
 
-    reverse ? y-- : y++
-}, 150)
+//     reverse ? y-- : y++
+// }, 150)
+
+// laltop skills
+// setInterval(() => {
+    
+//     laltopSkillsScreen.src = `./src/assets/laltopSkills/laltop${z}.png`
+//     z++
+
+//     if (z > 204) {
+//         z = 0
+//     }
+// }, 150)
+
+function iphoneInt() {
+    const iphone = setInterval(() => {
+    
+        iphoneScreen.src = `./src/assets/Mobile/mobile${y}.png`
+    
+        if (y === 160) {
+            reverse = true
+            laltopInt()
+            clearInterval(iphone)
+        } else if (y === 0) {
+            reverse = false
+            laltopInt()
+            clearInterval(iphone)
+        }
+    
+        reverse ? y-- : y++
+    }, 100)
+}
 
 //laltop skills
-setInterval(() => {
+function laltopInt() {
+    const laltop = setInterval(() => {
     
-    laltopSkillsScreen.src = `./src/assets/laltopSkills/laltop${z}.png`
-    z++
-
-    if (z > 204) {
-        z = 0
-    }
-}, 150)
+        laltopSkillsScreen.src = `./src/assets/laltopSkills/laltop${z}.png`
+        z++
+    
+        if (z > 204) {
+            z = 0
+            iphoneInt()
+            clearInterval(laltop)
+        }
+    }, 100)
+}
+laltopInt() 
